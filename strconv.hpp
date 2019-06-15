@@ -31,15 +31,12 @@ SOFTWARE.
 namespace lak
 {
     // char8_t typdef for C++ < 20
-    namespace
-    {
-        #if __cplusplus > 201703L
-        using std::u8string;
-        #else
-        using char8_t = uint_least8_t;
-        using u8string = std::basic_string<char8_t>;
-        #endif
-    }
+    #if __cplusplus > 201703L
+    using std::u8string;
+    #else
+    using char8_t = uint_least8_t;
+    using u8string = std::basic_string<char8_t>;
+    #endif
 
     template<typename FROM>
     struct string_conv_iterator
