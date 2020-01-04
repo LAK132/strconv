@@ -1,7 +1,7 @@
 /*
 MIT License
 
-Copyright (c) 2019 Lucas Kleiss (LAK132)
+Copyright (c) 2019, 2020 Lucas "LAK132" Kleiss
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -29,41 +29,41 @@ SOFTWARE.
 
 namespace lak
 {
-    template<typename TO, typename FROM>
-    std::basic_string<TO> to_string(FROM from)
-    {
-        return strconv<TO>(std::to_string(from));
-    }
+  template<typename TO, typename FROM>
+  std::basic_string<TO> to_string(FROM from)
+  {
+    return strconv<TO>(std::to_string(from));
+  }
 
-    template<typename FROM>
-    std::string to_string(FROM from)
-    {
-        return std::to_string(from);
-    }
+  template<typename FROM>
+  std::string to_string(FROM from)
+  {
+    return std::to_string(from);
+  }
 
-    template<typename FROM>
-    std::wstring to_wstring(FROM from)
-    {
-        return std::to_wstring(from);
-    }
+  template<typename FROM>
+  std::wstring to_wstring(FROM from)
+  {
+    return std::to_wstring(from);
+  }
 
-    template<typename FROM>
-    u8string to_u8string(FROM from)
-    {
-        return strconv_u8(std::to_string(from));
-    }
+  template<typename FROM>
+  std::u8string to_u8string(FROM from)
+  {
+    return strconv_u8(std::to_string(from));
+  }
 
-    template<typename FROM>
-    std::u16string to_u16string(FROM from)
-    {
-        return strconv_u16(std::to_string(from));
-    }
+  template<typename FROM>
+  std::u16string to_u16string(FROM from)
+  {
+    return strconv_u16(std::to_string(from));
+  }
 
-    template<typename FROM>
-    std::u32string to_u32string(FROM from)
-    {
-        return strconv_u32(std::to_string(from));
-    }
+  template<typename FROM>
+  std::u32string to_u32string(FROM from)
+  {
+    return strconv_u32(std::to_string(from));
+  }
 }
 
-#endif // LAK_TOSTRING_HPP
+#endif
